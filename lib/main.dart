@@ -53,14 +53,33 @@ class _moneyState extends State<money> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
+      child: Column(
         children: [
-          Container(
-            child: Row(
-              children: [
-                Container(
+          Stack(
+            children:[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: Colors.black26,
+
+                ),
+                width:1000,
+                height: 100,
+              ),
+            ),
+
+          ],
+
+          ),
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
                     color: Colors.black26,
@@ -68,16 +87,15 @@ class _moneyState extends State<money> {
                   ),
                   width:1000,
                   height: 100,
-
-                )
-              ],
-            ),
-
+                ),
+              )
+            ],
           ),
         ],
 
 
       ),
+
     );
   }
 }
